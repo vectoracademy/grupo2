@@ -17,7 +17,7 @@ public class restTemplate {
 	public ResponseEntity<List<pagos>> obtenerPagos (String nombreUsuario) {
 		
 		RestTemplate restTemplate = new RestTemplate();
-		String direccionUrl = "http://172.50.12.163:8090/pagos/ver/" + nombreUsuario;
+		String direccionUrl = "http://localhost:8090/pagos/ver/" + nombreUsuario;
 		ResponseEntity<List<pagos>> response = restTemplate.exchange(direccionUrl, HttpMethod.GET,null, new ParameterizedTypeReference<List<pagos>>(){});
 		
 		return response;
